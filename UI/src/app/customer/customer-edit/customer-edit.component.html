@@ -1,0 +1,33 @@
+<div class="form-container">
+    <div class="form-header">
+        <h1>CUSTOMER INFORMATION FORM</h1>
+    </div>
+    <div class="customer-form">
+        <form [formGroup]="customerForm">
+            <mat-form-field appearance="fill">
+                <mat-label>First Name</mat-label>
+                <input matInput formControlName="firstName">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Middle Name</mat-label>
+                <input matInput formControlName="middleName">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Last Name</mat-label>
+                <input matInput formControlName="lastName">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email">
+            </mat-form-field>
+        </form>
+        
+        <div class="button-container" style="float: right">
+            <button mat-raised-button color="basic" (click)="cancel()">Cancel</button>&nbsp;&nbsp;
+            <button mat-raised-button color="primary" (click)="save()">Save</button>
+        </div>
+    </div>
+</div>
+
+
+  

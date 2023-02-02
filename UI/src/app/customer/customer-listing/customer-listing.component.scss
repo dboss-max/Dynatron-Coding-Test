@@ -1,0 +1,21 @@
+
+.demo-table {
+    width: 100%;
+}
+
+.demo-button-container {
+    padding-bottom: 16px;
+}
+
+.demo-button + .demo-button {
+    margin-left: 8px;
+}
+  
+::ng-deep thead tr th {
+    background-color: #1976d2 !important;
+    color: white !important;
+}
+
+::ng-deep .highlight {
+    background-color: gold !important;
+}
