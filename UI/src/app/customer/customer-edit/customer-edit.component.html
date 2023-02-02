@@ -8,6 +8,9 @@
                 <mat-label>First Name</mat-label>
                 <input matInput formControlName="firstName">
             </mat-form-field>
+            <mat-error *ngIf="hasRequiredError('firstName')">
+                First Name is Required!
+            </mat-error>
             <mat-form-field appearance="fill">
                 <mat-label>Middle Name</mat-label>
                 <input matInput formControlName="middleName">
@@ -16,10 +19,16 @@
                 <mat-label>Last Name</mat-label>
                 <input matInput formControlName="lastName">
             </mat-form-field>
+            <mat-error *ngIf="hasRequiredError('lastName')">
+                Last Name is Required!
+            </mat-error>
             <mat-form-field appearance="fill">
                 <mat-label>Email</mat-label>
                 <input matInput formControlName="email">
             </mat-form-field>
+            <mat-error *ngIf="hasRequiredError('email')">
+                Email is Required!
+            </mat-error>
         </form>
         
         <div class="button-container" style="float: right">

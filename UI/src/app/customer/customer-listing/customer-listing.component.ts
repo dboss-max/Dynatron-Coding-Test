@@ -45,12 +45,12 @@ export class CustomerListingComponent implements OnInit, AfterViewInit {
   addData() {
     const dialogRef = this.dialog.open(CustomerEditComponent, {
       width: '800px',
-      height: '500px',
+      height: '520px',
       data: { },
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      this.customers.unshift(result);
+      if (result) this.customers.unshift(result);
       this.table.renderRows();
     });
   }
@@ -61,7 +61,7 @@ export class CustomerListingComponent implements OnInit, AfterViewInit {
 
     const dialogRef = this.dialog.open(CustomerEditComponent, {
       width: '800px',
-      height: '500px',
+      height: '520px',
       data: { customer: customer },
     });
 

@@ -36,11 +36,21 @@ export class CustomerEditComponent {
     }
   }
 
+  hasRequiredError(controlName: string) {
+    const control = this.customerForm.get(controlName);
+    return control != null && (control.dirty || control?.touched) && control?.hasError('required');
+  }
+
   cancel() {
     this.dialogRef.close();
   }
 
   save() {
+    if (this.customerForm.invalid) {
+      this.customerForm.markAllAsTouched();
+      return;
+    }
+
     const customer = this.customerForm.value;
 
     if (this.data?.customer?.id) { // edit customer
